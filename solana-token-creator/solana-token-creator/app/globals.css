@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-[#F7F7F8] text-[#16161A] antialiased; }
+
+.input { @apply w-full rounded-lg border border-transparent bg-[#F1F1F3] px-4 py-3 text-sm outline-none transition focus:border-brand focus:bg-white; }
+.label { @apply mb-2 block text-sm font-semibold; }
+.hint  { @apply mt-1.5 text-xs text-gray-500; }
+
+.toggle { @apply relative h-6 w-11 shrink-0 cursor-pointer rounded-full bg-gray-300 transition; }
+.toggle[data-on="true"] { @apply bg-brand; }
+.toggle::after { content: ""; @apply absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition; }
+.toggle[data-on="true"]::after { transform: translateX(20px); }
+
+.wallet-adapter-button-trigger { @apply !rounded-full !bg-black !text-sm !font-semibold !h-11; }
